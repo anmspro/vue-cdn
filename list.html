@@ -1,0 +1,26 @@
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h7> example 1 </h7>
+        <ul id="ex1">
+            <li v-for="(item, index) in items">
+                {{ parentMessage }} - {{ index }} - {{ item.message }}
+            </li>
+        </ul>
+        <ul id="ex2" class="demo">
+            <li v-for="(value, name, index) in object">
+                {{ index }}.{{ name }}: {{ value }}
+            </li>
+            <li v-for="n in evenNumbers">{{ n }}</li>
+        </ul>
+    </div>
+    <div>
+
+    </div>
+    <script src="list.js"></script>
+</body>
+</html>

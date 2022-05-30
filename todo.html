@@ -1,0 +1,19 @@
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <title>To-Do</title>
+    <h1>Simple To-Do</h1>
+</head>
+<body>
+    <div id="todo">
+        <input v-model="newTodoText" v-on:keyup.enter="addTodo">
+        <ul>
+            <li v-for="(tod, index) in todos">
+                {{ tod.title }}
+                <button v-on:click="removeTodo(index)">X</button>
+            </li>
+        </ul>
+    </div>
+    <script src="todo.js"></script>
+</body>
+</html>

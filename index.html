@@ -1,0 +1,31 @@
+<html>
+<head>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- <span v-if="seen">Now you see me</span> -->
+
+        <!-- <ol>
+            <li v-for="todo in todos">
+            {{ todo.text }}
+            </li>
+        </ol> -->
+
+        <!-- <p> {{message}} </p>
+        <button v-on:click="reverseMessage"> Reverse Message </button> -->
+
+        <!-- <p>{{ message }}</p>
+        <input v-model="message"> -->
+        <ol>
+        <todo-item
+            v-for="list in lists"
+            v-bind:todo = "list"
+            v-bind:todo.id = "list.id"></todo-item>
+        </ol>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

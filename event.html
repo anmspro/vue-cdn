@@ -1,0 +1,21 @@
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <title>Event</title>
+</head>
+<body>
+    <div id="click">
+        <button v-on:click="cnt += 1">Add</button>
+        <p>Output: {{cnt}}</p>
+    </div>
+
+    <div id="alert">
+        <button v-on:click="greet"> Greet </button>
+        <button v-on:click="say('Hi!')"> Say Hi </button>
+        <br><br>
+        <button v-on:click="warn('Form cannot be submitted.', $event)"> Submit </button>
+    </div>
+
+    <script src="event.js"></script>
+</body>
+</html>

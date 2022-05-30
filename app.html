@@ -1,0 +1,50 @@
+<html>
+<head>
+    <link rel="stylesheet" href="app.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <title>app</title>
+</head>
+<body>
+    <div id="components-demo">
+        <button-counter></button-counter>
+        <button-counter></button-counter>
+        <button-counter></button-counter>
+    </div>
+
+    <div id="blog-post">
+        <!-- <blog-post title="My journey with Vue"></blog-post>
+        <blog-post title="Blogging with Vue"></blog-post>
+        <blog-post title="Why Vue is so fun"></blog-post> -->
+        <!-- <blog-post v-for="post in posts" v-bind:key="post.id" v-bind:title="post.title"></blog-post> -->
+        <blog-post
+            v-for="post in posts"
+            v-bind:key="post.id"
+            v-bind:post="post"
+        ></blog-post>
+    </div>
+
+    <div id="blog-posts">
+        <div :style="{ fontSize: postFontSize + 'em' }">
+            <blog-posts v-for="post in posts"
+                        v-bind:key="post.id"
+                        v-bind:post="post"
+                        v-on:boro-text="postFontSize += $event"
+                        v-on:choto-text="postFontSize -= $event">
+            </blog-posts>
+        </div>
+    </div>
+    <br>
+    <div id="alert">
+        <alert-box>some 404</alert-box>
+    </div>
+    <br>
+
+    <div id="custom-input">
+        <input v-model="message" placeholder="Place input"></input>
+        <p>{{ reverseMessage }} </p>
+        <p> {{now}} </p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
